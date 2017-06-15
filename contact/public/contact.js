@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp',[]);
 
 myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
     console.log("Hello World from controller");
@@ -52,19 +52,4 @@ $scope.deselect = function() {
 }]);﻿
 
 
-
-myApp.config(function($routeProvider, $locationProvider) {                        
-  $routeProvider                                                                
-       .when('/', {                                            
-         templateUrl: "index.html",                                               
-         controller:'AppCtrl',                                
-        })
-        .when('/signup', {                                            
-         templateUrl: "/view/signup.html",                                               
-         controller:'AuthenticationController',                                
-        })                                                                 
-        .otherwise({                      
-            template: 'does not exists'   
-        });      
-});
 
